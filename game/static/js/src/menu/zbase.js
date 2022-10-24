@@ -19,6 +19,7 @@ class AcGameMenu{
 </div>
         `);
         this.root.$ac_game.append(this.$menu);
+
         this.$single_mode = this.$menu.find(".ac-game-menu-content-item-single-mode");
         this.$multi_mode = this.$menu.find('.ac-game-menu-content-item-multi-mode');
         this.$settings = this.$menu.find('.ac-game-menu-content-item-settings');
@@ -30,18 +31,29 @@ class AcGameMenu{
     start(){
        this.add_listening_events();
     }
+
     add_listening_events() {
         let outer = this;
         this.$single_mode.click(function(){
             console.log('single');
         });
         this.$multi_mode.click(function(){
+            console.log('single');
             console.log('multi');
         });
         this.$settings.click(function(){
             console.log('settings');
         });
 
+    }
+
+    show() {  //显示menu界面
+        this.$menu.show();
+
+    }
+
+    hide() {
+        this.$menu.hide();
     }
 
 }
