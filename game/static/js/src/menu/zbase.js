@@ -28,14 +28,15 @@ class AcGameMenu{
 
     }
 
-    start(){
+    start() {   //绑定监听函数，设置初值等
        this.add_listening_events();
     }
 
     add_listening_events() {
-        let outer = this;
+        let that = this;
         this.$single_mode.click(function(){
-            console.log('single');
+            that.hide();
+            that.root.playground.show();
         });
         this.$multi_mode.click(function(){
             console.log('single');
